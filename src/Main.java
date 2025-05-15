@@ -33,18 +33,19 @@ public class Main {
         System.out.println("Задача 8.");
         int amount = 29000;
         int total = 0;
-        for (int i = 0; i < 12; i++) {
-            total = total + amount;
+        for (int i = 1; i <=12; i++) {
+            total += amount;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей.");
         }
         System.out.println(total);
 
         System.out.println("Задача 9.");
-        amount = 29000;
         total = 0;
-        for (int i = 0; i < 12; i++) {
-            total = total + total / 100;
-            total = total + amount;
+        double percent = 1D / 100;
+        for (int i = 1; i <= 12; i++) {
+            total += amount;
+            total = (int) (total * (1 + percent));
+
             System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей.");
         }
         System.out.println("Задача 10.");
